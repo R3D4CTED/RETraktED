@@ -12,8 +12,10 @@ def menu():
             i+=1
         
         print("Please select an option:", end='')
+        
         try:
             menu_utils.MENU_METHOD_MAPPINGS[input()]()
+        
         except KeyError:
             print("Invalid Input.")
 

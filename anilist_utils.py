@@ -43,14 +43,15 @@ def authorize():
     query = '''
     query {
         Viewer {
-           id
            name
         }
     }
     '''
     response = requests.post(anilist_request_url, headers=header, json={'query' : query})
     user_name = ""
+    
     print_line_strip()
+    
     try:
         user_name = response.json()['data']['Viewer']['name']
     
@@ -63,8 +64,10 @@ def authorize():
         print_line_strip()
         return
     
-    print(f"Authorized as: {user_name}. User ID: {response.json()['id']}.")
+    print(f"Authorized as: {user_name}.")
+    
     print_line_strip()
+
 
 
     
