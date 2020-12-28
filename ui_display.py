@@ -3,6 +3,7 @@ import menu_utils
 
 def menu():
     print_line_strip()
+    print()
     print("Main Menu.")
     while True:
         i = 1
