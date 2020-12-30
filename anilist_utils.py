@@ -8,11 +8,11 @@ from ui_utils import print_line_strip
 
 def authorize():
     app_url = "https://anilist.co/settings/developer"
-    redirect_uri = "https://anilist.co/api/v2/oauth/pin"
+    redirect_uri = "https://anilist.co/api/v2/oauth/pin"    
     
     print("Welcome to the AniList authorization wizard!")
     print_line_strip()
-    
+
     print(f"Please head over to {app_url} and create a new application.")
     print(f"Redirect URI must be set to {redirect_uri}.")
     time.sleep(2)
@@ -22,7 +22,7 @@ def authorize():
     config.ANILIST_API_CLIENT_ID = input()
     
     print_line_strip()
-
+    
     auth_url = f"https://anilist.co/api/v2/oauth/authorize?client_id={config.ANILIST_API_CLIENT_ID}&response_type=token"
     print(f"Please head over to {auth_url} and login, and enter the code you receive below.")
     time.sleep(2)
