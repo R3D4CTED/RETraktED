@@ -6,10 +6,11 @@ AniList/MAL to Trakt.tv sync.
 ## Done
 * AniList Auth
 * Basic Skeleton UI
+* Trakt Auth
 
 ## TODO
 
-* Trakt Auth
+
 * Getting Anime List and Progress Data from AniList.
 * Verifying data on both ends.
 * Actually writing data to Trakt.
